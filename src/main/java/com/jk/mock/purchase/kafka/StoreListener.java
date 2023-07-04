@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StoreListener {
     @Autowired private Processor processor;
-    @KafkaListener(topics = "STORE")
+    @KafkaListener(topics = "STORE", groupId = "app")
     public void purchaseListen(String message){
         JSONObject jsonObject = new JSONObject(message);
         Purchase purchase = new Purchase();
