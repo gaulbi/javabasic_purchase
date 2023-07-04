@@ -1,10 +1,23 @@
 package com.jk.mock.purchase.bean;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class Purchase {
+    @Id
+    @Column
     private String purchaseId;
+    @Column
     private String productId;
+    @Column
     private int quantity;
+    @Column
     private double price;
+    @Column
     private String customerId;
 
     public String getPurchaseId() {
