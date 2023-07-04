@@ -1,0 +1,8 @@
+{
+  "invoiceId": "i0001",
+  "userId": "user1",
+  "itemId": "item0001",
+  "quantity": 10,
+  "price": 20.99,
+  "vip": false
+}

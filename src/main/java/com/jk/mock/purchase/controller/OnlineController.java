@@ -24,6 +24,8 @@ public class OnlineController {
         purchase.setQuantity(onlinePurchase.getQuantity());
         if(onlinePurchase.isVip()){
             purchase.setPrice(onlinePurchase.getPrice() - (onlinePurchase.getPrice() * VIP_DISCOUNT));
+        } else {
+            purchase.setPrice(onlinePurchase.getPrice());
         }
 
         boolean isValidPurchase = processor.validatePurchase(purchase);

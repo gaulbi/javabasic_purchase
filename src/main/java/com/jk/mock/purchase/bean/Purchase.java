@@ -1,5 +1,6 @@
 package com.jk.mock.purchase.bean;
 
+import com.google.gson.Gson;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -58,5 +59,10 @@ public class Purchase {
 
     public void setCustomerId(String customerId) {
         this.customerId = customerId;
+    }
+
+    @Override
+    public String toString(){
+        return new Gson().toJson(this);
     }
 }
